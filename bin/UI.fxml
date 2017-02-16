@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UIController">
+   <left>
+      <VBox alignment="CENTER" prefHeight="315.0" prefWidth="102.0" style="-fx-background-color: #11ee22; -fx-spacing: 10; -fx-padding: 10 10 10 10; -fx-border-color: #33ee22;" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="insertField" />
+            <Button fx:id="insertButton" mnemonicParsing="false" onAction="#insertEvent" prefHeight="26.0" prefWidth="75.0" text="Insert" />
+            <TextField fx:id="removeField" />
+            <Button fx:id="removeButton" mnemonicParsing="false" onAction="#removeEvent" prefHeight="26.0" prefWidth="116.0" text="Remove" />
+            <TextField fx:id="findField" />
+            <Button fx:id="findButton" mnemonicParsing="false" onAction="#findEvent" prefHeight="26.0" prefWidth="91.0" text="Find" />
+            <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearEvent" prefHeight="26.0" prefWidth="138.0" text="Clear" />
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <Pane prefHeight="35.0" prefWidth="600.0" style="-fx-background-color: #eeeeee; -fx-border-color: #e0e0e0;" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="AVL Tree Visualization">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+   <bottom>
+      <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="600.0" style="-fx-background-color: #abcdef; -fx-spacing: 20; -fx-padding: 10;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="pauseButton" mnemonicParsing="false" onAction="#pauseEvent" text="Pause" />
+            <Button fx:id="nextButton" mnemonicParsing="false" onAction="#nextEvent" text="Next" />
+            <Label fx:id="messageLabel" text="Waiting..." />
+         </children>
+      </HBox>
+   </bottom>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
